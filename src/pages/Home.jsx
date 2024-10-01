@@ -13,7 +13,7 @@ const Home = () => {
           muted
           className="absolute top-0 left-0 w-full h-full object-cover"
         ></video>
-        <Link to="/registration">
+        <Link to="https://forms.gle/cT57HSyc9Su2jz2Q6">
           <button
             className="bg-[#FF9900] hover:bg-[#FF7800] text-white font-bold py-2 px-4 rounded uppercase absolute z-10"
             style={{
