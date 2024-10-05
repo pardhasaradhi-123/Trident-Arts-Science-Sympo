@@ -1,30 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import bgVid from "../assets/bgVid.mp4";
+import elDorado from "../assets/elDorado.png";
+import jeppiaarUniversity from "../assets/jeppiaarUniversity.jpg";
+import Educity_Logo from "../assets/Jeppiaar Educity Logo_01-1.png";
 
 const Home = () => {
+  const IMG = [
+    { src: jeppiaarUniversity },
+    { src: elDorado },
+    { src: Educity_Logo, width: "w-32 max-lg:w-20 max-sm:w-16" },
+  ];
   return (
     <>
-      <div className="h-screen flex justify-center items-center relative">
+      <div className="h-full relative">
         <video
           src={bgVid}
           loop
           autoPlay
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         ></video>
-        <Link to="https://forms.gle/cT57HSyc9Su2jz2Q6">
-          <button
-            className="bg-[#FF9900] hover:bg-[#FF7800] text-white font-bold py-2 px-4 rounded uppercase absolute z-10"
-            style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            registration form
-          </button>
-        </Link>
+        <div>
+          <div className="flex justify-around items-center max-lg:h-48">
+            {IMG.map((eachIMG, index) => {
+              return (
+                <img
+                  src={eachIMG.src}
+                  alt=""
+                  key={index}
+                  className={`w-80 max-lg:w-56 max-sm:w-32 ${eachIMG.width}`}
+                />
+              );
+            })}
+          </div>
+          <div className="flex justify-center items-center h-screen">
+            <Link to="https://forms.gle/cT57HSyc9Su2jz2Q6">
+              <button className="bg-[#FF9900] hover:bg-[#FF7800] text-white font-bold py-2 px-4 rounded uppercase">
+                registration form
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );
