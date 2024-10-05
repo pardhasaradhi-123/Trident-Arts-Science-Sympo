@@ -9,7 +9,7 @@ const Home = () => {
   const IMG = [
     { src: jeppiaarUniversity },
     { src: elDorado },
-    { src: Educity_Logo, width: "w-32 max-lg:w-20 max-sm:w-16" },
+    { src: Educity_Logo, width: "h-60 max-lg:h-52 max-sm:h-32" },
   ];
   return (
     <>
