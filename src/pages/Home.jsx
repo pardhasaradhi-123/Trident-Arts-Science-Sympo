@@ -35,7 +35,7 @@ const Home = () => {
             })}
           </div>
           <div className="flex justify-center items-center h-screen">
-            <Link to="https://forms.gle/cT57HSyc9Su2jz2Q6">
+            <Link to="https://forms.gle/y3KhEvLh9SHjsoCN6">
               <button className="bg-[#FF9900] hover:bg-[#FF7800] text-white font-bold py-2 px-4 rounded uppercase">
                 registration form
               </button>
